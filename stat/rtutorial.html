@@ -10,6 +10,18 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+        <audio id="backgroundMusic" autoplay>
+         <source src="../SKELTONS instrumental.wav" type="audio/wav">
+            Your browser does not support the audio tag.
+        </audio>
+    <header>
+        <button id="musicControlBtn" onclick="toggleMusic()">
+            <div class="audioBtn">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </button>
+    </header>
+
     <header>
         <div class="navbar">
             <div class="logo">
@@ -48,6 +60,20 @@
             ? 'fa-solid fa-xmark'
             : 'fa-solid fa-bars'
         }   
+
+        /*Music*/
+        const musicControlBtn = document.getElementById('musicControlBtn');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        function toggleMusic() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                musicControlBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            } else {
+                backgroundMusic.pause();
+                musicControlBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            }
+        }
 
     </script>
 

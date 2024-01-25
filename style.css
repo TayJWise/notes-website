@@ -200,3 +200,12 @@ section#rtutorial{
   color: #fff;
   transition: margin-top 0.1s ease;
 }
+
+audio {
+  width: 40px; 
+  height: 40px; 
+}
+
+.audioBtn{
+  position: sticky;
+}
