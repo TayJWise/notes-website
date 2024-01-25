@@ -114,6 +114,7 @@ section#hero{
     justify-content: center;
     text-align: center;
     color: #fff;
+    transition: margin-top 0.1s ease;
 }
 
 #hero h1{
@@ -133,6 +134,11 @@ section#hero{
 
   .dropdown_menu {
     display: block;
+    z-index: 2;
+  }
+
+  .tutorials{
+    width: 25rem;
   }
 }
 
@@ -141,18 +147,25 @@ section#hero{
     left: 2rem;
     width: unset;
   }
+
+  .tutorials{
+    width: 15rem;
+    z-index: 2;
+  }
 }
 
 .tutorials{
   padding: 2rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
-  border-radius: 10px;
-  width: 25rem;
+  border-radius: 20px;
+  display: block;
 }
 
 .tutorials li{
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 .tutorials li:hover{

@@ -37,13 +37,18 @@
     
     <main>
         <section id="hero">
-            <h1>R Tutorial</h1>
+            <div class="toggle_btn"> 
+            <h1 class="topics">R Tutorial</h1>
                 <ul class="tutorials">
                     <li>Variables</li>
                     <li>Tables</li>
                     <li>Subsets</li>
+                    <li>Mean</li>
+                    <li>Max and Min</li>
+                    <li>Versus</li>
                     <li>Plots</li>
                 </ul>
+            </div>
             <h1>Laboratories</h1>
                 <li><a href="labs/Lab1.html">Lab 1</a></li>
         </section>
@@ -61,8 +66,19 @@
             toggleBtnIcon.classList = isOpen
             ? 'fa-solid fa-xmark'
             : 'fa-solid fa-bars'
-        }   
+            
+            const heroSection = document.getElementById('hero');
+            heroSection.style.marginTop = (isOpen && window.innerWidth <= 576) ? '350px' : '0';
+    }
 
+    window.addEventListener('resize', function () {
+        if (dropDownMenu.classList.contains('open') && window.innerWidth <= 576) {
+            heroSection.style.marginTop = '350px';
+        } else {
+            heroSection.style.marginTop = '0';
+      }
+    });
+         
     </script>
 </body>
 </html>
