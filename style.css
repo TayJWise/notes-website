@@ -165,7 +165,6 @@ section#hero{
 .tutorials li{
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
 }
 
 .tutorials li:hover{
@@ -177,7 +176,26 @@ section#hero{
   margin-top: 275px;
 }
 
-.tutorial_content{
-  margin: -1.5rem;
-  display: none;
+.topics:hover{
+  cursor: pointer;
+  color: pink;
+}
+ 
+.statList{
+  font-size: 1.5rem;
+}
+
+.statHeader{
+  font-size: 3rem;
+}
+
+section#rtutorial{
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  transition: margin-top 0.1s ease;
 }
