@@ -68,14 +68,14 @@
             : 'fa-solid fa-bars'
             
             const heroSection = document.getElementById('hero');
-            heroSection.style.marginTop = (isOpen && window.innerWidth <= 576) ? '350px' : '0';
+            heroSection.style.marginTop = (isOpen && window.innerWidth <= 576) ? '350px' : '0px';
     }
 
     window.addEventListener('resize', function () {
         if (dropDownMenu.classList.contains('open') && window.innerWidth <= 576) {
             heroSection.style.marginTop = '350px';
         } else {
-            heroSection.style.marginTop = '0';
+            heroSection.style.marginTop = '0px';
       }
     });
          
