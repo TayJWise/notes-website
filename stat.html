@@ -40,16 +40,16 @@
             <div class="toggle_btn"> 
             <h1 class="topics">R Tutorial</h1>
                 <ul class="tutorials">
-                    <li class="tutorial-item" data-target="variables">Variables</li>
-                        <div id="variables" class="tutorial-content">
-                            <p class="tutorials_exp">Variables in R don't need to be declared. To assign data to an R variable,
+                    <li class="tutorial_item" data-target="variables">Variables</li>
+                        <div id="variables" class="tutorial_content">
+                            <p>Variables in R don't need to be declared. To assign data to an R variable,
                                 use the <- sign where the variable is on the left and the data is on the 
                                 right.
                             </p>
                         </div>
-                    <li class="tutorial-item"  data-target="tables">Tables</li>                                                                                                          
-                        <div id="tables" class="tutorial-content">
-                            <p class="tutorials_exp">Variables in R don't need to be declared. To assign data to an R variable,
+                    <li class="tutorial_item"  data-target="tables">Tables</li>
+                        <div id="variables" class="tutorial_content">
+                            <p>Variables in R don't need to be declared. To assign data to an R variable,
                                 use the <- sign where the variable is on the left and the data is on the 
                                 right.
                             </p>
@@ -72,6 +72,7 @@
         const toggleBtn = document.querySelector('.toggle_btn')
         const toggleBtnIcon = document.querySelector('.toggle_btn i')
         const dropDownMenu = document.querySelector('.dropdown_menu')
+        const heroSection = document.getElementById('hero');
 
         toggleBtn.onclick = function () {
             dropDownMenu.classList.toggle('open')
@@ -89,31 +90,11 @@
             if (dropDownMenu.classList.contains('open') && window.innerWidth <= 576) {
                 heroSection.style.marginTop = '275px';
             } else {
-                heroSection.style.marginTop = '0px';
-        }
+                heroSection.style.marginTop = '0px' 
+            }
         });
 
-                        document.addEventListener('DOMContentLoaded', function () {
-                    const tutorialItems = document.querySelectorAll('.tutorial-item');
-
-                    tutorialItems.forEach(item => {
-                        item.onclick = function () {
-                            const targetId = this.getAttribute('data-target');
-                            const targetContent = document.getElementById(targetId);
-
-                            // Toggle visibility of the content
-                            targetContent.classList.toggle('visible');
-
-                            // Set the initial state based on the visibility
-                            if (!targetContent.classList.contains('visible')) {
-                                targetContent.style.display = 'none';
-                            } else {
-                                targetContent.style.display = 'block';
-                            }
-                        };
-                    });
-                });
-         
+        
     </script>
 </body>
 </html>
