@@ -44,6 +44,7 @@ header {
   gap: 2rem;
 }
 
+/* navbar buttons */
 .navbar .toggle_btn {
   color: #fff;
   font-size: 1.5rem;
@@ -73,6 +74,7 @@ header {
   scale: 0.95;
 }
 
+/* Dropdown menu */
 .dropdown_menu {
   display: none;
   position: absolute;
@@ -139,4 +141,21 @@ section#hero{
     left: 2rem;
     width: unset;
   }
+}
+
+.tutorials{
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  width: 25rem;
+}
+
+.tutorials li{
+  margin-bottom: 2rem;
+}
+
+.tutorials li:hover{
+  color: pink;
+  cursor: pointer;
 }
