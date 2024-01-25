@@ -40,8 +40,20 @@
             <div class="toggle_btn"> 
             <h1 class="topics">R Tutorial</h1>
                 <ul class="tutorials">
-                    <li>Variables</li>
-                    <li>Tables</li>
+                    <li class="tutorial-item" data-target="variables">Variables</li>
+                        <div id="variables" class="tutorial-content">
+                            <p class="tutorials_exp">Variables in R don't need to be declared. To assign data to an R variable,
+                                use the <- sign where the variable is on the left and the data is on the 
+                                right.
+                            </p>
+                        </div>
+                    <li class="tutorial-item"  data-target="tables">Tables</li>                                                                                                          
+                        <div id="tables" class="tutorial-content">
+                            <p class="tutorials_exp">Variables in R don't need to be declared. To assign data to an R variable,
+                                use the <- sign where the variable is on the left and the data is on the 
+                                right.
+                            </p>
+                        </div>
                     <li>Subsets</li>
                     <li>Mean</li>
                     <li>Max and Min</li>
@@ -50,7 +62,9 @@
                 </ul>
             </div>
             <h1>Laboratories</h1>
-                <li><a href="labs/Lab1.html">Lab 1</a></li>
+                <ul>
+                    <li><a href="labs/Lab1.html">Lab 1</a></li>
+                </ul>
         </section>
     </main>
 
@@ -68,16 +82,37 @@
             : 'fa-solid fa-bars'
             
             const heroSection = document.getElementById('hero');
-            heroSection.style.marginTop = (isOpen && window.innerWidth <= 576) ? '350px' : '0px';
-    }
+            heroSection.style.marginTop = (isOpen && window.innerWidth <= 576) ? '275px' : '0px';
+        }
 
-    window.addEventListener('resize', function () {
-        if (dropDownMenu.classList.contains('open') && window.innerWidth <= 576) {
-            heroSection.style.marginTop = '350px';
-        } else {
-            heroSection.style.marginTop = '0px';
-      }
-    });
+        window.addEventListener('resize', function () {
+            if (dropDownMenu.classList.contains('open') && window.innerWidth <= 576) {
+                heroSection.style.marginTop = '275px';
+            } else {
+                heroSection.style.marginTop = '0px';
+        }
+        });
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                    const tutorialItems = document.querySelectorAll('.tutorial-item');
+
+                    tutorialItems.forEach(item => {
+                        item.onclick = function () {
+                            const targetId = this.getAttribute('data-target');
+                            const targetContent = document.getElementById(targetId);
+
+                            // Toggle visibility of the content
+                            targetContent.classList.toggle('visible');
+
+                            // Set the initial state based on the visibility
+                            if (!targetContent.classList.contains('visible')) {
+                                targetContent.style.display = 'none';
+                            } else {
+                                targetContent.style.display = 'block';
+                            }
+                        };
+                    });
+                });
          
     </script>
 </body>

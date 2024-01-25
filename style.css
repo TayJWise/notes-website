@@ -174,5 +174,13 @@ section#hero{
 }
 
 .topics{
-  margin-top: 100px;
+  margin-top: 150px;
+}
+
+.tutorial-content {
+  display: none; 
+}
+
+.tutorial-content.visible {
+  display: block; 
 }
